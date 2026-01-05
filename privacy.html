@@ -4,203 +4,294 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - RSEM</title>
+    <meta name="description" content="Privacy Policy for RSEM services and applications.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --text-color: #333;
-            --bg-color: #f4f4f4;
-            --container-width: 800px;
+        /* Custom styles */
+        .gradient-bg {
+            background: linear-gradient(-45deg, #0a0a0a, #171717, #1c1c1c, #0f0f0f);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
+        
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
-
-        .container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            background: #fff;
-            padding: 40px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #e5e5e5, #a3a3a3, #d4d4d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-
-        header {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        h1 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
-
-        h2 {
-            color: var(--primary-color);
-            margin-top: 30px;
-            font-size: 1.5rem;
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-
-        p {
-            margin-bottom: 15px;
+        
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
         }
-
-        ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .last-updated {
-            font-size: 0.9rem;
-            color: #777;
-            font-style: italic;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 2rem;
-            }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #525252, #737373);
+            border-radius: 4px;
         }
     </style>
 </head>
-<body>
+<body class="gradient-bg min-h-screen font-sans text-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold tracking-tight">
+                    <span class="text-white">R</span><span class="text-neutral-500">SEM</span>
+                </a>
+                <div class="flex items-center gap-6">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="hidden sm:inline">Back to Home</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <div class="container">
-        <header>
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Last updated: 05/01/2026</p>
-        </header>
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Privacy Policy</span>
+                </h1>
+                <p class="text-gray-400 text-sm">Last updated: January 5, 2026</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-neutral-500 to-neutral-700 mx-auto rounded-full mt-4"></div>
+            </div>
+            
+            <!-- Content -->
+            <div class="glass-card rounded-3xl p-8 md:p-12 space-y-10">
+                
+                <!-- Introduction -->
+                <section>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        This page is used to inform visitors regarding my policies with the collection, use, and 
+                        disclosure of Personal Information if anyone decided to use my Service.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        If you choose to use my Service, then you agree to the collection and use of information in 
+                        relation to this policy. The Personal Information that I collect is used for providing and 
+                        improving the Service. I will not use or share your information with anyone except as described 
+                        in this Privacy Policy.
+                    </p>
+                </section>
+                
+                <!-- Information Collection -->
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-database text-neutral-500"></i>
+                        Information Collection and Use
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        For a better experience, while using our Service, I may require you to provide us with certain 
+                        personally identifiable information. The information that I request will be retained on your 
+                        device and is not collected by me in any way.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        The app does use third-party services that may collect information used to identify you.
+                    </p>
+                    <p class="text-gray-400 mb-3">Link to privacy policy of third-party service providers used by the app:</p>
+                    <ul class="space-y-2 ml-4">
+                        <li>
+                            <a href="https://www.google.com/policies/privacy/" target="_blank" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Google Play Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                AdMob
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://firebase.google.com/policies/analytics" target="_blank" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Google Analytics for Firebase
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://firebase.google.com/support/privacy/" target="_blank" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Firebase Crashlytics
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/about/privacy/update/printable" target="_blank" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Facebook Audience Network
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- Log Data -->
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-file-alt text-neutral-500"></i>
+                        Log Data
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        I want to inform you that whenever you use my Service, in a case of an error in the app 
+                        I collect data and information (through third-party products) on your phone called Log Data. 
+                        This Log Data may include information such as your device Internet Protocol ("IP") address, 
+                        device name, operating system version, the configuration of the app when utilizing my Service, 
+                        the time and date of your use of the Service, and other statistics.
+                    </p>
+                </section>
+                
+                <!-- Cookies -->
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-cookie-bite text-neutral-500"></i>
+                        Cookies
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. 
+                        These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        This Service does not use these "cookies" explicitly. However, the app may use third-party code 
+                        and libraries that use "cookies" to collect information and improve their services. You have the option 
+                        to either accept or refuse these cookies and know when a cookie is being sent to your device.
+                    </p>
+                </section>
+                
+                <!-- Security -->
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-shield-alt text-neutral-500"></i>
+                        Security
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        I value your trust in providing us your Personal Information, thus we are striving to use commercially 
+                        acceptable means of protecting it. But remember that no method of transmission over the internet, 
+                        or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.
+                    </p>
+                </section>
+                
+                <!-- Children's Privacy -->
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-child text-neutral-500"></i>
+                        Children's Privacy
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        These Services do not address anyone under the age of 13. I do not knowingly collect personally 
+                        identifiable information from children under 13. In the case I discover that a child under 13 has 
+                        provided me with personal information, I immediately delete this from our servers. If you are a 
+                        parent or guardian and you are aware that your child has provided us with personal information, 
+                        please contact me so that I will be able to do necessary actions.
+                    </p>
+                </section>
+                
+                <!-- Changes -->
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-sync-alt text-neutral-500"></i>
+                        Changes to This Privacy Policy
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        I may update our Privacy Policy from time to time. Thus, you are advised to review this page 
+                        periodically for any changes. I will notify you of any changes by posting the new Privacy Policy 
+                        on this page.
+                    </p>
+                </section>
+                
+                <!-- Contact -->
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-envelope text-neutral-500"></i>
+                        Contact Us
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at 
+                        <a href="mailto:rahmani@seifelmoulouk.com" class="text-white font-medium hover:underline">rahmani@seifelmoulouk.com</a>.
+                    </p>
+                </section>
+                
+            </div>
+            
+            <!-- Back Button -->
+            <div class="text-center mt-12">
+                <a href="index.html" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-neutral-700 to-neutral-900 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-white/20 transition-all duration-300 transform hover:scale-105 border border-neutral-600">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+            
+        </div>
+    </main>
 
-        <section>
-            <p>
-                This page is used to inform visitors regarding my policies with the collection, use, and 
-                disclosure of Personal Information if anyone decided to use my Service.
-            </p>
-            <p>
-                If you choose to use my Service, then you agree to the collection and use of information in 
-                relation to this policy. The Personal Information that I collect is used for providing and 
-                improving the Service. I will not use or share your information with anyone except as described 
-                in this Privacy Policy.
-            </p>
-        </section>
-
-        <section>
-            <h2>Information Collection and Use</h2>
-            <p>
-                For a better experience, while using our Service, I may require you to provide us with certain 
-                personally identifiable information. The information that I request will be retained on your 
-                device and is not collected by me in any way [OR: retained by us and used as described in this privacy policy].
-            </p>
-            <p>
-                The app does use third-party services that may collect information used to identify you.
-            </p>
-            <p>Link to privacy policy of third-party service providers used by the app:</p>
-            <ul>
-                <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-                <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank">AdMob</a></li>
-                <li><a href="https://firebase.google.com/policies/analytics" target="_blank">Google Analytics for Firebase</a></li>
-                <li><a href="https://firebase.google.com/support/privacy/" target="_blank">Firebase Crashlytics</a></li>
-                <li><a href="https://www.facebook.com/about/privacy/update/printable" target="_blank">Facebook Audience Network</a></li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Log Data</h2>
-            <p>
-                I want to inform you that whenever you use my Service, in a case of an error in the app 
-                I collect data and information (through third-party products) on your phone called Log Data. 
-                This Log Data may include information such as your device Internet Protocol (“IP”) address, 
-                device name, operating system version, the configuration of the app when utilizing my Service, 
-                the time and date of your use of the Service, and other statistics.
-            </p>
-        </section>
-
-        <section>
-            <h2>Cookies</h2>
-            <p>
-                Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. 
-                These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
-            </p>
-            <p>
-                This Service does not use these “cookies” explicitly. However, the app may use third-party code 
-                and libraries that use “cookies” to collect information and improve their services. You have the option 
-                to either accept or refuse these cookies and know when a cookie is being sent to your device.
-            </p>
-        </section>
-
-        <section>
-            <h2>Security</h2>
-            <p>
-                I value your trust in providing us your Personal Information, thus we are striving to use commercially 
-                acceptable means of protecting it. But remember that no method of transmission over the internet, 
-                or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.
-            </p>
-        </section>
-
-        <section>
-            <h2>Children’s Privacy</h2>
-            <p>
-                These Services do not address anyone under the age of 13. I do not knowingly collect personally 
-                identifiable information from children under 13. In the case I discover that a child under 13 has 
-                provided me with personal information, I immediately delete this from our servers. If you are a 
-                parent or guardian and you are aware that your child has provided us with personal information, 
-                please contact me so that I will be able to do necessary actions.
-            </p>
-        </section>
-
-        <section>
-            <h2>Changes to This Privacy Policy</h2>
-            <p>
-                I may update our Privacy Policy from time to time. Thus, you are advised to review this page 
-                periodically for any changes. I will notify you of any changes by posting the new Privacy Policy 
-                on this page.
-            </p>
-        </section>
-
-        <section>
-            <h2>Contact Us</h2>
-            <p>
-                If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at 
-                <strong><a href="mailto:rahmani@seifelmoulouk.com">rahmani@seifelmoulouk.com</a></strong>.
-            </p>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 RSEM. All rights reserved.</p>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-white/10">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-gray-400 text-sm">
+                © 2026 Seif El Moulouk Rahmani. All rights reserved.
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://www.linkedin.com/in/rahmani-seif-el-moulouk-03234758/" target="_blank" rel="noopener noreferrer" 
+                   class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="https://x.com/c_madangle" target="_blank" rel="noopener noreferrer" 
+                   class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <i class="fab fa-x-twitter text-xl"></i>
+                </a>
+            </div>
+            <div class="text-gray-400 text-sm">
+                Built with <i class="fas fa-heart text-red-500"></i> and Tailwind CSS
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
