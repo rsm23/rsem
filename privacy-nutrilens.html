@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - NutriLens</title>
+    <meta name="description" content="Privacy Policy for the NutriLens application.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        .gradient-bg {
+            background: linear-gradient(-45deg, #0a0a0a, #171717, #1c1c1c, #0f0f0f);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #e5e5e5, #a3a3a3, #d4d4d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #525252, #737373);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen font-sans text-white">
+    
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="60" viewBox="0 0 800 400"><defs><linearGradient id="logoGradPrivacyApp" x1="0%" x2="100%" y1="0%" y2="0%"><stop offset="0%" style="stop-color:#00f2ff;stop-opacity:1"/><stop offset="50%" style="stop-color:#5a7df0;stop-opacity:1"/><stop offset="100%" style="stop-color:#d400ff;stop-opacity:1"/></linearGradient><filter id="glowPrivacyApp" width="200%" height="200%" x="-50%" y="-50%"><feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="4"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g fill="none" stroke="url(#logoGradPrivacyApp)" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" filter="url(#glowPrivacyApp)" transform="translate(70 100)"><path d="m60 40-40 60 40 60M120 160V40h40a30 30 0 0 1 0 60h-40m40 0 40 60M280 60c0-30-50-30-50 0 0 40 50 40 50 80 0 30-50 30-50 0M360 40h-50v120h50m-50-60h40M400 160V40l50 60 50-60v120M600 40l40 60-40 60"/></g><g fill="url(#logoGradPrivacyApp)" filter="url(#glowPrivacyApp)" transform="translate(70 100)"><circle cx="120" cy="160" r="5"/><circle cx="120" cy="40" r="5"/><circle cx="200" cy="160" r="5"/><circle cx="280" cy="60" r="5"/><circle cx="230" cy="140" r="5"/><circle cx="360" cy="40" r="5"/><circle cx="360" cy="160" r="5"/><circle cx="310" cy="100" r="5"/><circle cx="400" cy="160" r="5"/><circle cx="500" cy="160" r="5"/></g></svg>
+                </a>
+                <div class="flex items-center gap-6">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="hidden sm:inline">Back to Home</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Privacy Policy</span>
+                </h1>
+                <p class="text-gray-400 text-sm">Last updated: April 23, 2026</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-neutral-500 to-neutral-700 mx-auto rounded-full mt-4"></div>
+            </div>
+            
+            <div class="glass-card rounded-3xl p-8 md:p-12 space-y-10">
+                <section>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        This Privacy Policy explains how NutriLens ("the App", "we", "us", or "our") collects,
+                        uses, stores, and shares information when you use the NutriLens mobile application and
+                        related services.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        By using NutriLens, you agree to the practices described in this Privacy Policy. If you do
+                        not agree, please do not use the App.
+                    </p>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-database text-neutral-500"></i>
+                        Information We Collect
+                    </h2>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>Depending on how you use the App, we may collect the following categories of information:</p>
+                        <ul class="space-y-3 ml-4 list-disc marker:text-neutral-500">
+                            <li><span class="text-white font-medium">Food and image data:</span> meal photos, menu photos, receipt photos, leftover comparison images, and analysis results generated from them.</li>
+                            <li><span class="text-white font-medium">Profile and nutrition preference data:</span> calorie goals, diet preferences, allergies, restrictions, health-profile inputs, and language settings.</li>
+                            <li><span class="text-white font-medium">Account data:</span> if you sign in or enable cloud backup, your Google account identifier, email address, display name, and authentication data may be processed through Firebase and Google Sign-In.</li>
+                            <li><span class="text-white font-medium">Usage and device data:</span> technical logs, app settings, notification token, device-related identifiers, and timestamps needed to operate and improve the App.</li>
+                            <li><span class="text-white font-medium">Purchase data:</span> subscription and purchase status information provided by Apple, Google, or other platform billing providers.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-brain text-neutral-500"></i>
+                        How We Use Information
+                    </h2>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>We use information to provide and improve NutriLens, including to:</p>
+                        <ul class="space-y-3 ml-4 list-disc marker:text-neutral-500">
+                            <li>analyze meal, menu, and receipt images with AI-powered nutrition features;</li>
+                            <li>generate calorie estimates, macro breakdowns, summaries, meal plans, diet plans, and health-coach responses;</li>
+                            <li>store and display your food history, reports, and progress views;</li>
+                            <li>sync or back up your data across devices when you enable cloud features;</li>
+                            <li>send reminders, alerts, and service notifications if you allow them;</li>
+                            <li>manage subscriptions, premium access, and purchase restoration;</li>
+                            <li>display ads for users without premium access where applicable; and</li>
+                            <li>detect problems, maintain security, and improve reliability.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-camera text-neutral-500"></i>
+                        Photos, Scans, and AI Processing
+                    </h2>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>
+                            When you use food scanning, menu analysis, receipt analysis, leftover tracking, travel-food guidance,
+                            meal-plan generation, diet-plan generation, or health-coach features, the App may send images,
+                            text inputs, and relevant profile context to AI providers for processing.
+                        </p>
+                        <p>
+                            This processing is used to return nutrition estimates, recommendations, summaries, and other
+                            in-app results. These outputs are informational only and are not medical advice.
+                        </p>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-mobile-alt text-neutral-500"></i>
+                        Data Stored on Your Device
+                    </h2>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>
+                            NutriLens stores certain information locally on your device, including food history,
+                            nutrition summaries, preferences, cached data, and settings needed for core app functionality.
+                        </p>
+                        <p>
+                            Some technical values, such as notification tokens or app state preferences, may also be
+                            stored locally to support notifications, reminders, and smoother app behavior.
+                        </p>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-cloud text-neutral-500"></i>
+                        Cloud Backup and Sync
+                    </h2>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>
+                            If you sign in and use cloud features, your food records, nutrition data, image references,
+                            translation cache, and related metadata may be stored in cloud services such as Firebase.
+                        </p>
+                        <p>
+                            Cloud backup is optional. If you do not use account-based features, most of your food-history
+                            data may remain only on your device, except where data must be sent to external services to
+                            provide live functionality such as AI analysis, notifications, ads, or billing.
+                        </p>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-share-alt text-neutral-500"></i>
+                        Third-Party Services
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        NutriLens relies on third-party providers to deliver parts of the service. These providers may
+                        process information in accordance with their own privacy policies.
+                    </p>
+                    <p class="text-gray-400 mb-3">Services used by the App may include:</p>
+                    <ul class="space-y-2 ml-4">
+                        <li>
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Google Play Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Firebase (Authentication, Firestore, Messaging, Storage)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Google Sign-In
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Google AdMob
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                OpenAI
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Groq
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                OpenRouter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Anthropic
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                                Apple App Store and In-App Purchase Services
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-ad text-neutral-500"></i>
+                        Ads and Purchases
+                    </h2>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>
+                            NutriLens may show app-open, interstitial, and rewarded ads to users who do not have premium access.
+                            Advertising partners may collect device and usage data according to their own policies.
+                        </p>
+                        <p>
+                            Subscription purchases and restorations are handled by platform billing providers such as Apple
+                            and Google. We do not receive your full payment card information.
+                        </p>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-bell text-neutral-500"></i>
+                        Notifications
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        If you enable notifications, the App may use a push-notification token to send reminders,
+                        updates, and service-related alerts. You can change your notification permissions in your
+                        device settings.
+                    </p>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-file-alt text-neutral-500"></i>
+                        Log Data
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        We and our providers may collect technical log data such as IP address, device type, operating
+                        system version, network status, app configuration, timestamps, and error details for debugging,
+                        security, and service improvement.
+                    </p>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-cookie-bite text-neutral-500"></i>
+                        Cookies and Similar Technologies
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        NutriLens does not rely on browser cookies in the traditional website sense inside the mobile App.
+                        However, third-party SDKs may use similar technologies or identifiers to support authentication,
+                        notifications, ads, analytics, and related services.
+                    </p>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-lock text-neutral-500"></i>
+                        Data Retention and Security
+                    </h2>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>
+                            We retain information for as long as reasonably necessary to provide the App, comply with
+                            legal obligations, resolve disputes, and enforce our agreements.
+                        </p>
+                        <p>
+                            We use commercially reasonable safeguards to protect your information, but no method of
+                            transmission or storage is completely secure, and absolute security cannot be guaranteed.
+                        </p>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-user-shield text-neutral-500"></i>
+                        Your Choices
+                    </h2>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>You may be able to:</p>
+                        <ul class="space-y-3 ml-4 list-disc marker:text-neutral-500">
+                            <li>decline optional permissions such as camera, photos, or notifications;</li>
+                            <li>delete local app data from the App or by uninstalling it;</li>
+                            <li>sign out of account-based features;</li>
+                            <li>delete cloud backup data where those controls are available; and</li>
+                            <li>contact us to request access, correction, or deletion of certain information, subject to applicable law.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-child text-neutral-500"></i>
+                        Children's Privacy
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        NutriLens is not intended for children under 13, and we do not knowingly collect personal
+                        information from children under 13. If you believe a child has provided personal information,
+                        please contact us so we can review and take appropriate action.
+                    </p>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-sync-alt text-neutral-500"></i>
+                        Changes to This Privacy Policy
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated"
+                        date on this page. Continued use of NutriLens after an update means you acknowledge the revised version.
+                    </p>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-envelope text-neutral-500"></i>
+                        Contact Us
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        If you have questions about this Privacy Policy, contact us at
+                        <a href="mailto:rahmani@seifelmoulouk.com" class="text-white font-medium hover:underline">rahmani@seifelmoulouk.com</a>.
+                    </p>
+                </section>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="index.html" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-neutral-700 to-neutral-900 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-white/20 transition-all duration-300 transform hover:scale-105 border border-neutral-600">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 px-6 border-t border-white/10">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-gray-400 text-sm">
+                © 2026 Seif El Moulouk Rahmani. All rights reserved.
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://www.linkedin.com/in/rahmani-seif-el-moulouk-03234758/" target="_blank" rel="noopener noreferrer" 
+                   class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="https://x.com/c_madangle" target="_blank" rel="noopener noreferrer" 
+                   class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <i class="fab fa-x-twitter text-xl"></i>
+                </a>
+            </div>
+            <div class="text-gray-400 text-sm">
+                Built with <i class="fas fa-heart text-red-500"></i> and Tailwind CSS
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
