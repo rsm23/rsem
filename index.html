@@ -380,6 +380,58 @@
         .foot-inner a { color: var(--gray); }
         .foot-inner a:hover { color: var(--white); }
 
+        /* ================= CV VIEWER ================= */
+        body.cv-open { overflow: hidden; }
+        .cv-dialog {
+            width: min(1120px, calc(100vw - 2rem));
+            height: min(900px, calc(100dvh - 2rem));
+            max-width: none;
+            max-height: none;
+            margin: auto;
+            padding: 0;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            background: #101010;
+            color: var(--white);
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.72);
+        }
+        .cv-dialog::backdrop {
+            background: rgba(0, 0, 0, 0.82);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+        .cv-shell { height: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+        .cv-head {
+            min-height: 4.5rem;
+            padding: 0.85rem 1rem 0.85rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            border-bottom: 1px solid var(--line-b);
+        }
+        .cv-title { display: grid; gap: 0.12rem; }
+        .cv-title strong { font-family: 'Anton', sans-serif; font-size: 1.35rem; font-weight: 400; text-transform: uppercase; }
+        .cv-title span { color: var(--gray); font-size: 0.65rem; }
+        .cv-actions { display: flex; align-items: center; gap: 1.25rem; }
+        .cv-action { color: var(--gray); transition: color 180ms ease; }
+        .cv-action:hover { color: var(--white); }
+        .cv-close {
+            width: 2.75rem;
+            height: 2.75rem;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--line-b);
+            background: transparent;
+            color: var(--white);
+            font: inherit;
+            font-size: 1.45rem;
+            cursor: pointer;
+            transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+        }
+        .cv-close:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+        .cv-frame-wrap { min-height: 0; padding: 0.75rem; background: #1a1a1a; }
+        .cv-frame { width: 100%; height: 100%; display: block; border: 0; background: #e8e8e8; }
+
         @media (max-width: 900px) {
             .about-grid, .project, .project.flip-order { grid-template-columns: 1fr; }
             .project.flip-order .p-info { order: 1; }
@@ -391,6 +443,10 @@
             .nav-links a:not(.keep) { display: none; }
             .skill-row { grid-template-columns: 3rem 1fr auto; }
             .skill-row .tag { display: none; }
+        }
+
+        @media (max-width: 700px) {
+            .cv-dialog { display: none; }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -414,6 +470,7 @@
                 <a href="#craft" class="flip"><span data-text="Craft">Craft</span></a>
                 <a href="#work" class="flip"><span data-text="Work">Work</span></a>
                 <a href="#experience" class="flip"><span data-text="Experience">Experience</span></a>
+                <a href="cv.pdf" target="_blank" rel="noopener" class="flip" data-cv-open aria-haspopup="dialog" aria-label="View CV"><span data-text="CV ↗">CV ↗</span></a>
                 <a href="#contact" class="flip keep"><span data-text="Contact ↗">Contact ↗</span></a>
             </div>
         </div>
@@ -440,6 +497,7 @@
                 </p>
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap;" class="rv">
                     <a href="#work" class="btn magnet">See the work ↓</a>
+                    <a href="cv.pdf" target="_blank" rel="noopener" class="btn magnet" data-cv-open aria-haspopup="dialog">View CV ↗</a>
                     <a href="#contact" class="btn magnet">Get in touch</a>
                 </div>
             </div>
@@ -671,6 +729,25 @@
         </div>
     </section>
 
+    <dialog class="cv-dialog" id="cv-dialog" aria-labelledby="cv-dialog-title">
+        <div class="cv-shell">
+            <header class="cv-head">
+                <div class="cv-title">
+                    <strong id="cv-dialog-title">Curriculum vitae</strong>
+                    <span class="mono">Seif El Moulouk Rahmani · Full stack developer</span>
+                </div>
+                <div class="cv-actions mono">
+                    <a href="cv.pdf" target="_blank" rel="noopener" class="cv-action">Open ↗</a>
+                    <a href="cv.pdf" download="Seif-El-Moulouk-Rahmani-CV.pdf" class="cv-action">Download ↓</a>
+                    <button type="button" class="cv-close" data-cv-close aria-label="Close CV viewer">×</button>
+                </div>
+            </header>
+            <div class="cv-frame-wrap">
+                <iframe class="cv-frame" src="cv.pdf#view=FitH" title="CV of Seif El Moulouk Rahmani"></iframe>
+            </div>
+        </div>
+    </dialog>
+
     <footer>
         <div class="foot-inner">
             <span>© <span id="year">2026</span> Seif El Moulouk Rahmani. All rights reserved.</span>
@@ -691,6 +768,34 @@
             .reduce((acc, [v, s]) => { while (n >= v) { acc += s; n -= v; } return acc; }, '');
         document.getElementById('year-roman').textContent = toRoman(year);
         document.getElementById('year').textContent = year;
+
+        // Accessible desktop CV viewer; mobile keeps the native PDF-tab fallback.
+        const cvDialog = document.getElementById('cv-dialog');
+        const cvTriggers = document.querySelectorAll('[data-cv-open]');
+        const cvClose = cvDialog.querySelector('[data-cv-close]');
+        let activeCVTrigger = null;
+
+        cvTriggers.forEach((trigger) => {
+            trigger.addEventListener('click', (event) => {
+                const useNativePDF = window.matchMedia('(max-width: 700px)').matches;
+                if (useNativePDF || typeof cvDialog.showModal !== 'function') return;
+
+                event.preventDefault();
+                activeCVTrigger = trigger;
+                cvDialog.showModal();
+                document.body.classList.add('cv-open');
+                cvClose.focus();
+            });
+        });
+
+        cvClose.addEventListener('click', () => cvDialog.close());
+        cvDialog.addEventListener('click', (event) => {
+            if (event.target === cvDialog) cvDialog.close();
+        });
+        cvDialog.addEventListener('close', () => {
+            document.body.classList.remove('cv-open');
+            activeCVTrigger?.focus();
+        });
 
         const io = new IntersectionObserver((entries) => {
             entries.forEach((e) => {
