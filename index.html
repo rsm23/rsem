@@ -305,6 +305,32 @@
             will-change: transform;
         }
         .p-media:hover img { filter: grayscale(0); transform: scale(1.01); }
+        .p-media .macscope-showcase {
+            display: grid;
+            grid-template-columns: 1.55fr 0.75fr;
+            gap: 1px;
+            aspect-ratio: 16 / 9;
+            background: var(--line-b);
+        }
+        .macscope-showcase .macscope-main,
+        .macscope-showcase .macscope-rail {
+            min-width: 0;
+            min-height: 0;
+            overflow: hidden;
+        }
+        .macscope-showcase .macscope-rail {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 1px;
+            background: var(--line-b);
+        }
+        .p-media .macscope-showcase img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: auto;
+            object-fit: cover;
+            object-position: center;
+        }
         .p-media .cap {
             position: absolute; left: 1.1rem; bottom: 0.9rem; z-index: 2;
             font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem;
@@ -493,7 +519,7 @@
                 <p class="rv">
                     I design, build and ship web software — from the database schema to
                     the last pixel. A decade of <b>Node.js, React, Next.js and Vue</b>,
-                    and three self-hosted products released as open source.
+                    and four independent products released as open source.
                 </p>
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap;" class="rv">
                     <a href="#work" class="btn magnet">See the work ↓</a>
@@ -543,7 +569,7 @@
             <div class="stats rv">
                 <div><div class="num">10+</div><div class="cap mono">Years experience</div></div>
                 <div><div class="num">50+</div><div class="cap mono">Projects shipped</div></div>
-                <div><div class="num">3&times;</div><div class="cap mono">Open-source products</div></div>
+                <div><div class="num">4&times;</div><div class="cap mono">Open-source products</div></div>
             </div>
         </div>
     </section>
@@ -578,9 +604,9 @@
                 <span class="rule"></span>
             </div>
             <p class="rv" style="color: var(--gray); max-width: 38rem; margin-bottom: 2rem;">
-                Three self-hosted products spanning desktop AI, media delivery, and
-                customer messaging — each designed, engineered, documented, and
-                shipped as a real working system.
+                Four shipped products spanning native macOS, desktop AI, media
+                delivery, and customer messaging — each designed, engineered,
+                documented, and shipped as a real working system.
             </p>
 
             <article class="project rv">
@@ -663,6 +689,40 @@
                             <img src="assets/projects/sendry.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="Sendry landing page showing campaign analytics and the unified customer inbox">
                         </span>
                         <span class="cap">sendry.seifelmoulouk.com ↗</span>
+                    </a>
+                </figure>
+            </article>
+
+            <article class="project flip-order rv">
+                <div class="p-info">
+                    <div class="p-meta">
+                        <span class="big-n">04</span>
+                        <span class="mono" style="color: var(--gray);">Native macOS system intelligence</span>
+                    </div>
+                    <h3>MacScope</h3>
+                    <p class="desc">
+                        A native Apple silicon command center for live system telemetry,
+                        deep process control, and focused power-user utilities — all in
+                        one fast, local-first macOS app.
+                    </p>
+                    <p class="stack mono">Swift 6 · SwiftUI · AppKit · macOS 14+</p>
+                    <div class="links">
+                        <a href="https://macscope.seifelmoulouk.com/" target="_blank" rel="noopener noreferrer" class="btn magnet">Live project ↗</a>
+                        <a href="https://github.com/rsm23/macscope" target="_blank" rel="noopener noreferrer" class="u-link mono">GitHub source</a>
+                    </div>
+                </div>
+                <figure class="p-fig">
+                    <a href="https://macscope.seifelmoulouk.com/" target="_blank" rel="noopener noreferrer" class="p-media" aria-label="Open the live MacScope project">
+                        <span class="frame parallax macscope-showcase" data-speed="-0.05">
+                            <span class="macscope-main">
+                                <img src="assets/projects/macscope-overview.png" width="2400" height="1290" loading="lazy" decoding="async" alt="MacScope Overview showing live CPU, memory, network, process, and system telemetry">
+                            </span>
+                            <span class="macscope-rail" aria-hidden="true">
+                                <img src="assets/projects/macscope-processes.png" width="2400" height="1290" loading="lazy" decoding="async" alt="">
+                                <img src="assets/projects/macscope-utilities.png" width="2400" height="1290" loading="lazy" decoding="async" alt="">
+                            </span>
+                        </span>
+                        <span class="cap">macscope.seifelmoulouk.com ↗</span>
                     </a>
                 </figure>
             </article>
