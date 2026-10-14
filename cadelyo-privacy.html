@@ -36,6 +36,7 @@
   <section>
     <h2>Receipt scanning and voice input</h2>
     <p>The camera is used only when you choose to scan a receipt. Receipt images and recognized text are processed locally using Apple Vision, bundled ML Kit text recognition, or bundled Tesseract models, depending on your device and the receipt language. Images associated with saved entries remain in Cadelyo's local storage.</p>
+    <p>On Android, Google's ML Kit SDK separately collects technical diagnostics and usage metrics: device and app information, an installation identifier, processing duration, API configuration and input/output sizes, SDK event types, and error codes. These are sent to Google over HTTPS for diagnostics and usage analytics. Receipt images and recognized text are not sent to Google by this OCR API. This SDK is not used in Cadelyo's iOS app. See <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit's Android data disclosure</a> and <a href="https://developers.google.com/ml-kit/terms">ML Kit Terms &amp; Privacy</a>.</p>
     <p>The microphone is used when you choose dictation. Cadelyo requires on-device speech recognition and does not send speech to a remote AI service. Cadelyo does not intentionally save an audio recording. A recognized amount or note may be applied to your editable draft. Dictation depends on the recognition service and language models installed on your device. Your operating system may use an internet connection to download those models under its own terms and privacy policy.</p>
     <p>You can deny or revoke camera and microphone permissions in device settings and continue entering transactions manually.</p>
   </section>
@@ -57,15 +58,15 @@
     <p>CSV export creates a file on your device and opens the system sharing sheet. The recipient and destination are your choice. Once shared, the recipient or chosen service controls its copy. Exports are not uploaded to us.</p>
   </section>
   <section>
-    <h2>Advertising and tracking</h2>
-    <p>Cadelyo does not include advertising, advertising attribution integrations, or a remote analytics or crash-reporting SDK. We do not sell your financial data or use it for advertising. RevenueCat's purchase analytics are separate from your local expense ledger.</p>
+    <h2>Advertising and technical analytics</h2>
+    <p>Cadelyo does not include advertising or advertising attribution integrations. We do not sell your financial data or use it for advertising. RevenueCat's purchase analytics and Android ML Kit's technical diagnostics are separate from your local expense ledger.</p>
   </section>
   <section>
     <h2>Retention, deletion, and your choices</h2>
     <p>Local records remain until you delete them, clear the app's storage, or uninstall it. Export records you need before clearing storage or uninstalling. Cadelyo cannot recover a ledger that was never backed up outside the app. Copies in exports or operating-system backups are managed separately by you and the relevant provider.</p>
     <p>Deleting Cadelyo does not cancel a store subscription. Manage or cancel subscriptions through the store that billed you. Purchase records may remain with Apple, Google, or RevenueCat under their retention practices and legal obligations.</p>
     <p>To request access, correction, or deletion of purchase-related information we can identify, email <a href="mailto:rahmani@seifelmoulouk.com?subject=Cadelyo%20privacy%20request">rahmani@seifelmoulouk.com</a> with “Cadelyo privacy request” in the subject. Because Cadelyo has no personal account, we may need a purchase transaction reference to find the appropriate record. Do not send your payment-card details, password, or expense ledger. Support correspondence is used to answer your request and retained as needed to handle it and meet applicable obligations.</p>
-    <p>Service providers may process purchase-related information in the countries where they operate. Depending on your location, applicable privacy law may provide rights to access, correct, delete, restrict, or object to processing, or complain to a data-protection authority. Contact us with requests concerning information we control.</p>
+    <p>Google retains ML Kit diagnostic records under its own policies. Service providers may process purchase-related or diagnostic information in the countries where they operate. Depending on your location, applicable privacy law may provide rights to access, correct, delete, restrict, or object to processing, or complain to a data-protection authority. Contact us with requests concerning information we control.</p>
   </section>
   <section>
     <h2>Changes and contact</h2>
@@ -77,6 +78,7 @@
     <h2>Résumé en français</h2>
     <p>Cadelyo est éditée par Rahmani Seif El Moulouk. Vos opérations, budgets, catégories, portefeuilles, notes et photos de tickets restent sur votre appareil. L'application ne propose ni compte utilisateur, ni connexion bancaire, ni synchronisation distante des données financières.</p>
     <p>Les tickets sont analysés localement. La dictée exige un moteur de reconnaissance local et les modèles de langue nécessaires. Cadelyo n'envoie pas votre voix à une API d'IA distante. Le système peut utiliser Internet pour télécharger ses modèles. Vous pouvez refuser les permissions et conserver la saisie manuelle.</p>
+    <p>Sur Android, le SDK ML Kit de Google collecte séparément des informations techniques sur l'appareil et l'application, un identifiant d'installation, des mesures de performance et des événements du SDK pour ses diagnostics et statistiques d'utilisation. Ces informations techniques sont transmises à Google via HTTPS ; les images des tickets et le texte reconnu ne le sont pas. Ce SDK n'est pas utilisé sur iOS.</p>
     <p>Apple ou Google gère les paiements Pro. RevenueCat reçoit un identifiant anonyme, l'historique des achats et les informations techniques nécessaires à leur vérification et à leur analyse. RevenueCat ne reçoit pas votre journal de dépenses, vos budgets, vos tickets ou vos enregistrements audio. Les achats et restaurations nécessitent Internet.</p>
     <p>Les widgets masquent les montants par défaut. Le verrouillage biométrique est géré par le système. L'export CSV partage uniquement le fichier et la destination que vous choisissez. La suppression de l'application peut effacer vos données locales et ne résilie pas votre abonnement. Les copies exportées et les sauvegardes système se gèrent séparément.</p>
     <p>Pour une question, une demande concernant vos données d'achat ou l'exercice d'un droit applicable, écrivez à <a href="mailto:rahmani@seifelmoulouk.com?subject=Cadelyo%20confidentialit%C3%A9">rahmani@seifelmoulouk.com</a>. Une référence de transaction peut être nécessaire pour retrouver un achat anonyme. N'envoyez pas de données bancaires, de mot de passe ou de journal de dépenses. La politique complète et les liens vers les prestataires figurent ci-dessus.</p>
