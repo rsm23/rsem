@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Glasshouse Calendar privacy policy</title>
+<meta name="description" content="How Glasshouse Calendar accesses, uses, stores and deletes Google Calendar data.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body><main>
+<h1>Glasshouse Calendar privacy policy</h1>
+<p class="date">Last updated: 13 November 2026</p>
+<p>Glasshouse Calendar is an optional calendar widget in the <a href="https://github.com/rsm23/glasshouse">Glasshouse fork maintained by Rahmani Seif El Moulouk</a>. It runs on the owner's rooted LG webOS TV. This Google OAuth application connects the owner's Google Calendar account to that TV.</p>
+<h2>Google Calendar data</h2>
+<p>The application requests read-only access to calendars available to the signed-in Google account. It reads the calendar list so the owner can choose calendars, and retrieves upcoming event details from those selections. It retains and displays event titles, dates and times, locations and calendar names, and uses event and participation status to omit cancelled events and declined invitations. It does not create, edit or delete Google Calendar events.</p>
+<p>Google authorization permits reading accessible calendars; the widget fetches upcoming events only from calendars selected by the owner. Google receives the TV's public IP address and the API requests needed for this feature.</p>
+<h2>Storage and sharing</h2>
+<p>Requests go directly between the TV and Google. This feature has no developer-operated calendar server, advertising system or analytics service. Calendar data is not sold, sent to advertisers, or used to train AI models.</p>
+<p>Upcoming event data is held in TV memory. OAuth credentials and the refresh token are stored on the TV in a file restricted to its root account. OAuth tokens and event data are excluded from Glasshouse settings backups and widget exports. Selected calendar identifiers and names are part of the saved Home layout and may be present in settings backups.</p>
+<p>Event titles, times and locations appear on the Home screen. People who can see the screen, or access the Glasshouse dashboard under the owner's access settings, may see the selected events. The owner should choose suitable calendars and protect access to the TV and dashboard.</p>
+<h2>Disconnecting and deletion</h2>
+<p>Disconnect Google Calendar in the widget settings to remove the TV's saved credentials, clear its calendar selections, switch the widget off and request token revocation from Google. The owner can also remove the application's access in <a href="https://myaccount.google.com/connections">Google Account settings</a>. Earlier settings backups may retain calendar identifiers and names until those backups are deleted.</p>
+<h2>Contact and changes</h2>
+<p>Questions can be raised through <a href="https://github.com/rsm23/glasshouse/issues">project support</a>. Do not include OAuth credentials, tokens or private calendar details in a public issue. Changes to this policy will be reflected in its last-updated date.</p>
+<p>The application's use of information received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+<nav aria-label="Calendar information"><a href="./">Glasshouse Calendar</a><a href="terms.html">Terms of use</a></nav>
+</main></body>
+</html>
